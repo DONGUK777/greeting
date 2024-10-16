@@ -6,10 +6,10 @@
     <title>Greeting</title>
 </head>
 <body>
-    <H1>이전에 입력한 내용들</H1>
+    <H1>나만의 축구 팀 꾸리기</H1>
     <ul>
-        <li th:each="person : ${names}">
-            No.<span th:text="${person.num}"></span>- 
+        <li th:each="person : ${PeopleStack}">
+            No.<span th:text="${person.num}"></span> - 
             <span th:text="${#strings.capitalize(person.name)}"></span>
         </li>
     </ul>
