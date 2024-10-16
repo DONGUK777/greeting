@@ -1,5 +1,8 @@
 # Getting Started
 
+### jenkins
+- http://localhost:8080
+
 ### Run
 ```bash
 $ ./gradlew bootRun
