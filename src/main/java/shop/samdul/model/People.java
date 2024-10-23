@@ -1,4 +1,4 @@
-package shop.samdul.greeting.controller;
+package shop.samdul.model;
 
 public class People {
     public int num;

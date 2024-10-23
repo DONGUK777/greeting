@@ -5,7 +5,7 @@ services:
     environment:
       MARIADB_ROOT_PASSWORD: example
       MARIADB_USER: todo_user
-      MARIADB_PASSWORD: todo_password
+      MARIADB_PASSWORD: todo_passwd
       MARIADB_DATABASE: encore
     volumes:
       - ./src/main/resources/db_config/initdb.d:/docker-entrypoint-initdb.d
@@ -16,9 +16,12 @@ services:
     container_name: todo-app
     build: .
     ports:
-      - 8888:8080
+      - 8888:8972
     restart: always
     depends_on:
       - database
     links:
       - database
+    platform: linux/amd64
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mariadb://database:3306/encore

@@ -1,11 +1,18 @@
 package shop.samdul.greeting.mapper;
 
+import org.apache.ibatis.annotations.Mapper;
 import shop.samdul.greeting.entity.TodoEntity;
 import java.util.List;
 
-import org.apache.ibatis.annotations.Mapper;
-
 @Mapper
 public interface TodoMapper {
-    public List<TodoEntity> findAll();
+    List<TodoEntity> findAll();
+
+    TodoEntity findById(Integer id);
+
+    void insertTodo(String subject, String body, Boolean completed);
+
+    void updateTodoById(TodoEntity todoEntity);
+
+    void deleteTodoById(Integer id);
 }

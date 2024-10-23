@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Greeting</title>
+    <title>GREETING</title>
 </head>
 <body>
-    <H1>나만의 축구 팀 꾸리기</H1>
+    <H1>입력한 이름</H1>
     <ul>
-        <li th:each="person : ${PeopleStack}">
-            No.<span th:text="${person.num}"></span> - 
+        <li th:each="person : ${names}">
+            <span th:text="${person.num}"></span>: 
             <span th:text="${#strings.capitalize(person.name)}"></span>
         </li>
     </ul>
 </body>
+</html>
